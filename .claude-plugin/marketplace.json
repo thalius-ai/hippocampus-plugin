@@ -4,7 +4,7 @@
     "name": "Thalius",
     "url": "https://www.thalius.ai"
   },
-  "description": "Thalius plugins: Hippocampus, the company's shared document memory.",
+  "description": "Thalius plugins: Hippocampus, an expert on your company's documents.",
   "plugins": [
     {
       "name": "thalius-hippocampus",
