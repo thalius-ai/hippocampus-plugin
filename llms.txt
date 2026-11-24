@@ -1,0 +1,22 @@
+# Thalius Hippocampus
+
+> An expert on your company's documents: complex questions across many files, answered with the page.
+
+Hippocampus is a remote MCP server at https://hippocampus.thalius.ai/mcp. Sign-in is OAuth in the browser; a free Thalius account works. The assistant acts as the signed-in person.
+
+## Docs
+
+- [README](README.md): what it is and how to connect each client
+- [Overview](about/overview.md): what the assistant can do
+- [Use cases](about/use-cases.md): questions by team
+- [Tools](about/tools.md): every tool, cost and limit
+- [Credits](about/credits.md): what is charged
+- [Security and privacy](about/security-privacy.md): what travels where
+- [Skill](skills/hippocampus/SKILL.md): how an assistant should use the tools
+- [Developer docs](https://www.thalius.ai/developers/mcp): setup guides for each client
+
+## Optional
+
+- [FAQ](about/faq.md)
+- [Test cases](about/test-cases.md)
+- [Install notes for agents](llms-install.md)

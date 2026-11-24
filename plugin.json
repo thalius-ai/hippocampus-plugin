@@ -1,0 +1,128 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "thalius-hippocampus",
+  "version": "0.2.2",
+  "description": "Turns your company's documents into an expert your AI consults: an LLM-built wiki that answers complex questions across many files, quoting the source of truth with page and link, in a small context. Includes a skill that picks the cheapest tool for each question.",
+  "author": {
+    "name": "Thalius",
+    "email": "support@thalius.ai",
+    "url": "https://www.thalius.ai"
+  },
+  "homepage": "https://www.thalius.ai/developers/mcp",
+  "repository": "https://github.com/thalius-ai/hippocampus-plugin",
+  "license": "MIT",
+  "keywords": [
+    "company documents",
+    "knowledge base",
+    "company wiki",
+    "document search",
+    "cite source",
+    "exact quotes",
+    "policies",
+    "contracts",
+    "llm wiki",
+    "source of truth",
+    "hippocampus",
+    "thalius"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Thalius Hippocampus",
+        "shortDescription": "An expert on your documents",
+        "longDescription": "Thalius Hippocampus turns your company's documents into an expert your AI can consult. Behind it is an LLM wiki: at import, language models write every document into folders, documents and sections, each with a summary, an outline and the exact text. A question walks that wiki the way an expert walks a library: titles, then summaries, then only the passage that answers it.\n\nVector search cuts documents into chunks and mixes them. It is fast on simple lookups but loses the thread on complex questions and large collections. Hippocampus keeps each document whole, so the answer comes from the right document, section and page.\n\nWith Hippocampus connected, your AI can:\n- answer complex questions across many documents: compare a clause across your contracts, trace a requirement through a specification, check a figure across years of reports;\n- quote the source of truth: each passage with its document, section, page and a link that opens it, and say so when the documents do not cover a question;\n- work in a small context: it reads the few passages it needs, not whole files; finding, opening and reading are free, searching and importing use credits;\n- keep knowledge current: save decisions, meeting notes and new procedures to the workspace when you ask.\n\nWhere teams use it: knowledge systems (policies, procedures, handbooks), business processes (offers, claims and onboarding checked against the current rules), research (one question across every paper and report), engineering (specifications, standards and design decisions a coding agent reads before it writes), legal and finance (the clause or the figure with its page).\n\nYour AI acts as you and sees only the documents you may see. Import PDF, scanned PDF, Word, PowerPoint, Excel, Markdown or text, or sync Google Drive and OneDrive. Documents are stored encrypted, one by one, in the EU and never used to train AI models. A free account works; sign-in is OAuth, no key to paste.",
+        "developerName": "Thalius",
+        "category": "Productivity",
+        "capabilities": [
+          "Answer complex questions across many documents",
+          "Search company documents by meaning",
+          "Quote the exact passage with its page and a link",
+          "Browse folders, documents and sections",
+          "Read exact text or a page range",
+          "Find documents by name or recent change",
+          "Add notes and files to the workspace",
+          "Show the credit balance"
+        ],
+        "websiteURL": "https://www.thalius.ai",
+        "supportURL": "https://www.thalius.ai/company",
+        "privacyPolicyURL": "https://www.thalius.ai/legal/privacy",
+        "termsOfServiceURL": "https://www.thalius.ai/legal/terms",
+        "defaultPrompt": [
+          "What does our employee handbook say about remote work? Quote the passage and its page.",
+          "Compare the termination clauses in our supplier contracts and quote each one with its page.",
+          "Save these meeting notes to /Meetings in Hippocampus."
+        ],
+        "brandColor": "#000000",
+        "brandColorDark": "#d0b7fb",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      },
+      "onboardingSkill": "./skills/hippocampus/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "A free overview of the workspace before any search",
+              "prompt": "What's in our Hippocampus knowledge base?",
+              "tools_triggered": [
+                "start"
+              ],
+              "expected_behavior": "Calls start once and lists the top folders with one line each. Spends no credits and does not search."
+            },
+            {
+              "description": "A cited answer from one document",
+              "prompt": "What is the notice period in our supplier agreement? Quote it.",
+              "tools_triggered": [
+                "search",
+                "read"
+              ],
+              "expected_behavior": "Answers with the exact sentence from the supplier agreement, names the document and the page, and gives the link that opens the passage. Does not invent a period that the document does not state."
+            },
+            {
+              "description": "Browsing a folder without spending credits",
+              "prompt": "Open the Policies folder and list what's in it.",
+              "tools_triggered": [
+                "open"
+              ],
+              "expected_behavior": "Calls open on /Policies and lists the documents with one line each. No search, no credits."
+            },
+            {
+              "description": "Finding what changed recently",
+              "prompt": "Which of our documents changed in the last week?",
+              "tools_triggered": [
+                "find"
+              ],
+              "expected_behavior": "Calls find for the most recently changed documents and lists them with their changed time. No search, no credits."
+            },
+            {
+              "description": "Keeping a decision for the team",
+              "prompt": "Save these meeting notes to /Meetings in Hippocampus: Decision: the launch moves to 3 March. Owner: Anna.",
+              "tools_triggered": [
+                "ingest",
+                "ingest_status"
+              ],
+              "expected_behavior": "Imports the notes as a Markdown document in /Meetings (on a connection made read-only, the person is first asked to allow adding documents), follows the import and reports the new document's address and who can read it."
+            }
+          ],
+          "negative": [
+            {
+              "description": "A general question that is not about company documents",
+              "prompt": "What will the weather be in Stockholm tomorrow?"
+            },
+            {
+              "description": "Creative writing with no company material",
+              "prompt": "Write a short poem about autumn."
+            },
+            {
+              "description": "A calculation that needs no company documents",
+              "prompt": "Convert 100 euros to Swedish kronor."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "0.2.2: two prompts (ask, overview), a usage guide, a server card that directories can read before sign-in, and neutral credit wording in every result."
+      }
+    }
+  }
+}

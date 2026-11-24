@@ -1,0 +1,20 @@
+{
+  "name": "thalius",
+  "interface": {
+    "displayName": "Thalius"
+  },
+  "plugins": [
+    {
+      "name": "thalius-hippocampus",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

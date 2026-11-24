@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Thalius",
+    "identifier": "thalius.ai",
+    "documentationUrl": "https://www.thalius.ai/developers/mcp",
+    "logoUrl": "https://raw.githubusercontent.com/thalius-ai/hippocampus-plugin/main/assets/icon.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:thalius.ai:mcp:hippocampus",
+      "displayName": "Thalius Hippocampus",
+      "type": "application/mcp-server-card+json",
+      "url": "https://hippocampus.thalius.ai/mcp/server-card",
+      "representativeQueries": [
+        "What is the notice period in our supplier contracts?",
+        "Compare the termination clauses across our supplier contracts",
+        "Quote what our policy says about data retention",
+        "Which of our documents changed this week?",
+        "Find the current procedure in our company documents"
+      ],
+      "tags": [
+        "documents",
+        "knowledge-base",
+        "citations",
+        "mcp"
+      ]
+    }
+  ]
+}

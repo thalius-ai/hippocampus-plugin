@@ -1,0 +1,22 @@
+{
+  "name": "thalius",
+  "owner": {
+    "name": "Thalius",
+    "url": "https://www.thalius.ai"
+  },
+  "description": "Thalius plugins: Hippocampus, the company's shared document memory.",
+  "plugins": [
+    {
+      "name": "thalius-hippocampus",
+      "source": "./",
+      "description": "An expert on your company's documents: complex questions across many files, answered with the page.",
+      "category": "productivity",
+      "tags": [
+        "documents",
+        "knowledge-base",
+        "citations",
+        "mcp"
+      ]
+    }
+  ]
+}

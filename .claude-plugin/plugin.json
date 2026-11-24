@@ -1,0 +1,33 @@
+{
+  "name": "thalius-hippocampus",
+  "displayName": "Thalius Hippocampus",
+  "version": "0.2.2",
+  "description": "Turns your company's documents into an expert your AI consults: an LLM-built wiki that answers complex questions across many files, quoting the source of truth with page and link, in a small context. Includes a skill that picks the cheapest tool for each question.",
+  "author": {
+    "name": "Thalius",
+    "email": "support@thalius.ai",
+    "url": "https://www.thalius.ai"
+  },
+  "homepage": "https://www.thalius.ai/developers/mcp",
+  "repository": "https://github.com/thalius-ai/hippocampus-plugin",
+  "license": "MIT",
+  "keywords": [
+    "company documents",
+    "knowledge base",
+    "company wiki",
+    "document search",
+    "cite source",
+    "exact quotes",
+    "policies",
+    "contracts",
+    "llm wiki",
+    "source of truth",
+    "hippocampus",
+    "thalius"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://www.thalius.ai/developers/mcp",
+  "supportUrl": "https://www.thalius.ai/company",
+  "privacyPolicyUrl": "https://www.thalius.ai/legal/privacy",
+  "termsOfServiceUrl": "https://www.thalius.ai/legal/terms"
+}

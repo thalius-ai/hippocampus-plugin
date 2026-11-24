@@ -1,0 +1,34 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "thalius-hippocampus",
+  "displayName": "Thalius Hippocampus",
+  "description": "Turns your documents into an LLM-built wiki your AI consults like an expert: complex questions across many files, each answer quoted with page and link.",
+  "version": "0.2.2",
+  "logo": "assets/icon.png",
+  "suggestedPrompts": [
+    "What does our employee handbook say about remote work? Quote the passage and its page.",
+    "Compare the termination clauses in our supplier contracts and quote each one with its page.",
+    "Save these meeting notes to /Meetings in Hippocampus."
+  ],
+  "author": {
+    "name": "Thalius",
+    "url": "https://www.thalius.ai"
+  },
+  "homepage": "https://www.thalius.ai/developers/mcp",
+  "repository": "https://github.com/thalius-ai/hippocampus-plugin",
+  "license": "MIT",
+  "keywords": [
+    "company documents",
+    "knowledge base",
+    "company wiki",
+    "document search",
+    "cite source",
+    "exact quotes",
+    "policies",
+    "contracts",
+    "llm wiki",
+    "source of truth",
+    "hippocampus",
+    "thalius"
+  ]
+}

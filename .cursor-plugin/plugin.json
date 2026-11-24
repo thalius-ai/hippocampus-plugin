@@ -1,0 +1,27 @@
+{
+  "name": "thalius-hippocampus",
+  "description": "An expert on your company's documents: complex questions across many files, answered with the page.",
+  "version": "0.2.2",
+  "author": {
+    "name": "Thalius",
+    "email": "support@thalius.ai"
+  },
+  "homepage": "https://www.thalius.ai/developers/mcp",
+  "repository": "https://github.com/thalius-ai/hippocampus-plugin",
+  "license": "MIT",
+  "keywords": [
+    "company documents",
+    "knowledge base",
+    "company wiki",
+    "document search",
+    "cite source",
+    "exact quotes",
+    "policies",
+    "contracts",
+    "llm wiki",
+    "source of truth",
+    "hippocampus",
+    "thalius"
+  ],
+  "logo": "assets/icon.svg"
+}

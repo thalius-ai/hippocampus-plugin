@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "hippocampus": {
+      "url": "https://hippocampus.thalius.ai/mcp"
+    }
+  }
+}

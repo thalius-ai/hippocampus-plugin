@@ -1,0 +1,11 @@
+{
+  "name": "thalius-hippocampus",
+  "version": "0.2.2",
+  "description": "An expert on your company's documents: complex questions across many files, answered with the page.",
+  "mcpServers": {
+    "hippocampus": {
+      "httpUrl": "https://hippocampus.thalius.ai/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
