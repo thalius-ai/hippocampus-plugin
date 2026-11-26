@@ -1,6 +1,6 @@
 # What Thalius Hippocampus is
 
-Hippocampus turns a company's documents into an expert its AI can consult. People import policies, contracts, procedures, specifications, reports and notes (PDF, scanned PDF, Word, PowerPoint, Excel, Markdown or text), or sync them from Google Drive and OneDrive. Behind it is an LLM wiki: at import, language models write every document into folders, documents and sections, each with a summary, an outline and the exact text. A question walks that wiki the way an expert walks a library: titles, then summaries, then only the passage that answers it.
+Hippocampus turns a company's documents into an expert its AI can consult. People import policies, contracts, procedures, specifications, reports and notes (PDF, scanned PDF, Word, PowerPoint, Excel, Markdown or text), or sync them from Google Drive and OneDrive. Behind it is an LLM wiki: at import, language models write every document into folders, documents and sections, each with a summary, an outline and the exact text.
 
 Vector search cuts documents into chunks and mixes them. It is fast on simple lookups but loses the thread on complex questions and large collections. Hippocampus keeps each document whole, so an answer comes from the right document, section and page, and the AI reads a few passages instead of whole files.
 
@@ -13,7 +13,7 @@ This plugin connects an AI assistant to that expert over the Model Context Proto
 | Teams with many documents | The exact clause, figure or routine, with the page it stands on |
 | People who must check answers | Every extract carries its document, section, pages and a link |
 | Developers building agents | Retrieval over the company's documents through MCP or the API, on a free account |
-| Companies with sensitive material | Documents stored encrypted in the EU; the assistant sees only what the signed-in person may see |
+| Companies with sensitive material | Encrypted in the EU, documents stored in Finland; the assistant sees only what the signed-in person may see |
 
 ## What the assistant can do
 

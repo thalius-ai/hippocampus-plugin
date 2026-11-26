@@ -34,7 +34,7 @@ Your AI is as good as what it can read. Hippocampus gives it your company's docu
 
 | Your AI without Hippocampus | Your AI with Hippocampus |
 |---|---|
-| Chunk-based vector search cuts documents into pieces and returns look-alike chunks from different files | It walks a wiki of your documents and reaches the section that answers |
+| Chunk-based vector search cuts documents into pieces and returns look-alike chunks from different files | It answers from an LLM-built wiki of your documents, down to the section and page |
 | Fast on simple lookups, but loses the thread on complex questions and large collections | Complex questions across many documents: compare, list every clause on a topic, follow a decision through its sources |
 | Whole files pasted into the chat fill the context window | A few passages, not whole files: the context stays small |
 | Answers you cannot check | Every claim quoted with its document, page and a link that opens it |
@@ -43,10 +43,10 @@ Your AI is as good as what it can read. Hippocampus gives it your company's docu
 
 ## How it works
 
-![How it works: documents of any origin are written into an LLM wiki at import; your AI walks the wiki and answers with the quoted passage, its page and a link](assets/how-it-works.png)
+![How it works: documents of any origin are written into an LLM wiki at import; your AI asks it and answers with the quoted passage, its page and a link](assets/how-it-works.png)
 
 - **At import**, language models write your documents into an LLM wiki: folders, documents and sections, each with a summary and an outline, the exact text kept by page. PDF, scanned PDF, Word, PowerPoint, Excel, Markdown and text; Google Drive and OneDrive.
-- **A question** walks titles, summaries and sections and reaches the exact passage, even across many documents. Finding, opening and reading are free; search by meaning uses credits. Search itself runs no generative model: it returns the passages, and your AI writes the answer.
+- **A question** is answered from the exact passage, even across many documents. Finding, opening and reading are free; search by meaning uses credits. Your AI writes the answer from the passages it reads.
 - **The answer** quotes the source with its page and a link into Hippocampus, so anyone can check it.
 - **It is also your team's shared memory.** When you ask, the assistant adds a decision, meeting notes or a new procedure, and it stays for the team.
 
@@ -237,7 +237,8 @@ Success rate: of the questions a perfect search would solve, the share each syst
 
 ## Security and privacy
 
-- Documents are stored encrypted in the EU (Finland), each with its own key, and are never used to train AI models.
+- Encrypted in the EU, documents stored in Finland, each with its own key.
+- Not used to train AI models: every provider we use is on terms that exclude training.
 - The assistant acts as you: one connection, one workspace, exactly your permissions.
 - Text from documents reaches the AI marked as quoted data, never as instructions.
 - A sign-in lasts 30 days. You can end an app's access at once in Hippocampus.
@@ -250,7 +251,7 @@ Details: [about/security-privacy.md](about/security-privacy.md), https://www.tha
 <details>
 <summary><b>Is this RAG?</b></summary>
 
-It is retrieval for your AI, but not chunk-based vector search. Language models write your documents into a wiki at import; a question walks it and returns whole, cited passages. Your AI writes the answer from them.
+It is retrieval for your AI. Language models write your documents into a wiki at import; your AI gets whole, cited passages from it and writes the answer.
 </details>
 
 <details>

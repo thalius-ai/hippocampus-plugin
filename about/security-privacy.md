@@ -24,10 +24,10 @@ The full statements are on https://www.thalius.ai/security and https://www.thali
 
 | Protection | Detail |
 |---|---|
-| Residency | Documents, the knowledge built from them and conversation history are stored in the EU (Finland), encrypted |
+| Residency | Encrypted in the EU, documents stored in Finland |
 | Encryption keys | Each document has its own key; Free and Starter keys are managed in Google Cloud's key management service; Corporate can hold the keys in its own service |
 | Access | The assistant acts as the signed-in person and sees exactly what that person may see |
-| Training | Your documents are never used to train AI models |
+| Training | Not used to train AI models: every provider we use is on terms that exclude training. |
 | Revocation | Disconnect an AI app at any time in Hippocampus, under Connect to your AI → Connected apps |
 
 ## Contact
